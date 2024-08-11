@@ -20,7 +20,6 @@ resource "aws_subnet" "eks_subnets" {
   count             = 3
   vpc_id            = aws_vpc.eks_vpc.id
   cidr_block        = cidrsubnet(aws_vpc.eks_vpc.cidr_block, 8, count.index)
-  availability_zone = element(data.aws_availability_zones.available.names, count.index)
 }
 
 resource "aws_security_group" "eks_security_group" {
@@ -115,4 +114,5 @@ resource "kubernetes_config_map" "aws_auth" {
   }
   lifecycle {
     ignore_changes = [data]
+  }
 }
