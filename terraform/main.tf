@@ -17,9 +17,9 @@ resource "aws_vpc" "eks_vpc" {
 }
 
 resource "aws_subnet" "eks_subnets" {
-  count             = 3
-  vpc_id            = aws_vpc.eks_vpc.id
-  cidr_block        = cidrsubnet(aws_vpc.eks_vpc.cidr_block, 8, count.index)
+  count      = 3
+  vpc_id     = aws_vpc.eks_vpc.id
+  cidr_block = cidrsubnet(aws_vpc.eks_vpc.cidr_block, 8, count.index)
 }
 
 resource "aws_security_group" "eks_security_group" {
@@ -29,7 +29,7 @@ resource "aws_security_group" "eks_security_group" {
 resource "aws_iam_role" "eks_cluster_role" {
   name = "eks-cluster-role"
   assume_role_policy = jsonencode({
-    Version   = "2012-10-17"
+    Version = "2012-10-17"
     Statement = [{
       Action    = "sts:AssumeRole"
       Effect    = "Allow"
@@ -45,7 +45,7 @@ resource "aws_iam_role" "eks_cluster_role" {
 resource "aws_iam_role" "eks_node_role" {
   name = "eks-node-role"
   assume_role_policy = jsonencode({
-    Version   = "2012-10-17"
+    Version = "2012-10-17"
     Statement = [{
       Action    = "sts:AssumeRole"
       Effect    = "Allow"
