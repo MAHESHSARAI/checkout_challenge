@@ -1,6 +1,3 @@
-Certainly! Below is a `README.md` template that summarizes all the components of your project including the Golang application, Docker configuration, GitHub Actions workflow, and Terraform infrastructure management. This template provides an overview of what your repository contains and how each part functions.
-
-```markdown
 # Full-Stack Cloud Application with Terraform and GitHub Actions
 
 This repository contains the source code and infrastructure as code for a simple web service written in Go, which is containerized using Docker, automatically tested and deployed using GitHub Actions, and managed with Terraform for robust infrastructure provisioning.
@@ -57,10 +54,10 @@ Manages cloud resources through Infrastructure as Code (IaC):
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/MAHESHSARAI/checkout_challenge.git
+   git clone https://github.com/your-username/repository-name.git
    cd repository-name
    ```
-
+   
 2. **Build the Docker image**:
    ```bash
    docker build -t hello-world-go .
