@@ -1,0 +1,32 @@
+# General
+.DS_Store
+*.log
+*.tmp
+*.swp
+
+# Terraform specific
+**/.terraform/*
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+terraform.tfstate.d/
+*.tfvars
+crash.log
+.terraform.lock.hcl
+
+# Go specific
+vendor/
+*.out
+*.exe
+*.test
+bin/
+
+# Ignore compiled binaries
+hello-world
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Ignore docker image output files
+*.tar
