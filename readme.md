@@ -89,6 +89,3 @@ Run the automated tests by executing:
 go test ./...
 ```
 
-## CI/CD Workflow
-
-Review the `.github/workflows/ci.yml` for the CI/CD pipeline steps. Adjustments can be made to accommodate different environments or additional steps.
