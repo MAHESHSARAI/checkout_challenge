@@ -71,6 +71,8 @@ jobs:
     - name: Terraform Plan
       id: plan
       run: terraform plan
+      env:
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
       working-directory: ./terraform
       continue-on-error: true
 
