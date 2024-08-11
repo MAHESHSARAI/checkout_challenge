@@ -25,6 +25,7 @@ variable "min_size" {
 variable "aws_account_id" {
   description = "Your AWS Account ID"
   type        = string
+  default     = "975049981009"
 }
 
 variable "ecr_repository_name" {
